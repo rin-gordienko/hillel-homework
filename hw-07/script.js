@@ -16,11 +16,12 @@ console.log(sumTo(3)); // 6
 // В случае если длина двух слов совпадает - вернуть первое найденое короткое слово.
 
 function findShort(string) {
-  // return array = string
-  //   .split(" ")
-  //   .reduce((a, b) => (a.length < b.length ? a : b));
   let array = string.split(" ").sort((a, b) => a.length - b.length);
   return array[0];
+}
+
+function findShort(string) {
+  return array = string.split(" ").reduce((a, b) => (b.length < a.length ? b : a));
 }
 
 let sentence = "Lorem ipsum dolor sit amet";
