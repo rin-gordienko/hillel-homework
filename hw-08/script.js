@@ -5,21 +5,18 @@
 // (в консоль) и функция не должна продолжать выполнение.
 
 function sumTwoSmallestNumbers(...numbers) {
-  const sortedNumbers = numbers.sort((a, b) => a - b);
-  if (sortedNumbers.length < 2) {
+  if (numbers.length < 2) {
     return console.error("Enter 2 or more numbers");
-  } else {
+  } const sortedNumbers = numbers.sort((a, b) => a - b);
     return sortedNumbers[0] + sortedNumbers[1];
-  }
 }
 
 // ternary operator
 function sumTwoSmallestNumbers(...numbers) {
-  const sortedNumbers = numbers.sort((a, b) => a - b);
-  // условие ? выражение1 : выражение2;
-  return sortedNumbers.length < 2
-    ? console.error("Enter 2 or more numbers")
-    : sortedNumbers[0] + sortedNumbers[1];
+  if (numbers.length < 2) {
+    return console.error("Enter 2 or more numbers");
+  } const sortedNumbers = numbers.sort((a, b) => a - b);
+  return sortedNumbers[0] + sortedNumbers[1];
 }
 
 console.log(sumTwoSmallestNumbers(19, 5, 42, 2, 77)); // 7
@@ -28,12 +25,13 @@ console.log(sumTwoSmallestNumbers(1)); // undefined и отдельный consol
 
 // 2. Написать функцию createCalculator
 
-function createCalculator(firstGivenValue) {
+function createCalculator(value) {
+  let initialValue = value;
   return {
-    sum: (secondGivenValue) => (firstGivenValue += secondGivenValue),
-    sub: (secondGivenValue) => (firstGivenValue -= secondGivenValue),
-    mult: (secondGivenValue) => (firstGivenValue *= secondGivenValue),
-    div: (secondGivenValue) => (firstGivenValue /= secondGivenValue),
+    sum: (defaultValue) => (initialValue += defaultValue),
+    sub: (defaultValue) => (initialValue -= defaultValue),
+    mult: (defaultValue) => (initialValue *= defaultValue),
+    div: (defaultValue) => (initialValue /= defaultValue),
   };
 }
 
