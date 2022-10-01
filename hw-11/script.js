@@ -1,20 +1,4 @@
-// Создать класс Person, который будет иметь следующие поля:
-
-// firstName
-// lastName
-// age
-// birthDayDate (в формате ‘YYYY-MM-DD’, например ‘1989-02-03’)
-// метод celebrate - который будет выводить возвращать текст “Happy Birthday, let’s celebrate’"
-
-// Класс Employee должен наследовать от Person и иметь следующие поля:
-
-// приватное свойство salary
-// jobPosition
-// метод getYearSalary (как в прошлой домашке)
-// метод celebrate - который будет проверять - если день вашего дня рождения в текущем году выпадает на выходной день - то вернет текст “Happy Birthday, let’s celebrate’".
-// Если же дата рождения выпадает на выходной - то вернет текст “Happy Birthday, but I need to work"
-
-// Создать 1 экземпляр класса Person и 1 экземпляр класса Employee. Сделать вызов метод celebrate у обоих объектов.
+"use strict"
 
 function isWeekend(date) {
   const userDay = new Date(date).getDay();
