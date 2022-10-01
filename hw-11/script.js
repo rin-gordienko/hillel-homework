@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 function isWeekend(date) {
   const userDay = new Date(date).getDay();
@@ -41,7 +41,7 @@ class Employee extends Person {
 
   getYearSalary() {
     return this._salary * 12;
-  } // не возвращает результат
+  } 
 
   celebrate() {
     let currentYear = new Date().getFullYear();
@@ -71,5 +71,6 @@ let employee = new Employee(
   "Painter"
 );
 console.log(employee);
+console.log(employee.getYearSalary());
 console.log(employee.celebrate());
 console.log(employee.birthdayDate);
