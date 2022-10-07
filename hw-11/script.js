@@ -5,26 +5,26 @@ function isWeekend(date) {
   return userDay === 0 || userDay === 6;
 }
 
-function getBirthday(date) {
-  let birthday = new Date(date);
-  let birthdayDay = birthday.getDate();
-  let birthdayMonth = birthday.getMonth() + 1;
-  let birthdayYear = birthday.getFullYear();
-  if (birthdayDay <= 9) {
-    birthdayDay = `0${birthdayDay}`;
-  }
-  if (birthdayMonth <= 9) {
-    birthdayMonth = `0${birthdayMonth}`;
-  }
-  return `${birthdayYear}-${birthdayMonth}-${birthdayDay}`;
-}
+// function getBirthday(date) {
+//   let birthday = new Date(date);
+//   let birthdayDay = birthday.getDate();
+//   let birthdayMonth = birthday.getMonth() + 1;
+//   let birthdayYear = birthday.getFullYear();
+//   if (birthdayDay <= 9) {
+//     birthdayDay = `0${birthdayDay}`;
+//   }
+//   if (birthdayMonth <= 9) {
+//     birthdayMonth = `0${birthdayMonth}`;
+//   }
+//   return `${birthdayYear}-${birthdayMonth}-${birthdayDay}`;
+// }
 
 class Person {
   constructor(firstName, lastName, age, birthdayDate) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
-    this.birthdayDate = getBirthday(birthdayDate);
+    this.birthdayDate = new Date(birthdayDate);
   }
   celebrate() {
     console.log("Happy Birthday, let's celebrate");
@@ -51,9 +51,9 @@ class Employee extends Person {
     // currentBirthday.setFullYear(new Date().getFullYear());
 
     if (isWeekend(currentBirthday)) {
-      return super.celebrate;
+      return "Happy Birthday, but I need to work";
     }
-    return "Happy Birthday, but I need to work";
+    return super.celebrate();
   }
 }
 
