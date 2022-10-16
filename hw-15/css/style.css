@@ -8,6 +8,8 @@
   font-style: normal;
   font-weight: 400;
   background: #d9dad7;
+  display: flex;
+    justify-content: center;
 }
 
 .album_title {
