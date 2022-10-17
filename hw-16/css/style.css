@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: "Roboto", " Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background: #d9dad7;
+  display: flex;
+    justify-content: center;
+}
+
+.album_title {
+  color: #c24d2c;
+  font-size: 20px;
+  margin: 15px;
+  list-style: circle;
+}
+
+.album_title:hover {
+  color: #3e4a61;
+  cursor: pointer;
+}
