@@ -1,5 +1,7 @@
 "use strict";
 
+const albumFolder = document.getElementById("albums");
+
 fetch("https://jsonplaceholder.typicode.com/albums")
   .then((response) => response.json())
   .then((albums) => {
@@ -7,12 +9,13 @@ fetch("https://jsonplaceholder.typicode.com/albums")
       let list = document.createElement("li");
       list.innerHTML = album.title;
       list.classList.add("album_title");
-      document.getElementById("albums").append(list);
+      albumFolder.append(list);
     }
   })
 
   .catch((error) => console.log(error));
 
+// const albumFolder = document.getElementById("albums");
 // let getAlbums = async () => {
 //   try {
 //     let response = await fetch("https://jsonplaceholder.typicode.com/albums");
@@ -21,7 +24,7 @@ fetch("https://jsonplaceholder.typicode.com/albums")
 //       let list = document.createElement("li");
 //       list.innerHTML = album.title;
 //       list.classList.add("album_title");
-//       document.getElementById("albums").append(list);
+//       albumFolder.append(list);
 //     }
 //   } catch (error) {
 //     console.log(error);
