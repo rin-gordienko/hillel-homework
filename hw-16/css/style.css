@@ -8,12 +8,10 @@
   font-style: normal;
   font-weight: 400;
   background: #d9dad7;
-  display: flex;
-    justify-content: center;
 }
 
 .album_title {
-  color: #c24d2c;
+  color: #961585;
   font-size: 20px;
   margin: 15px;
   list-style: circle;
@@ -21,5 +19,23 @@
 
 .album_title:hover {
   color: #3e4a61;
+}
+
+button {
+  margin-left: 15px;
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: none;
   cursor: pointer;
+  background: linear-gradient(to right, #8414e4, #e070bf);
+  color: #fff;
+}
+
+button:hover {
+  background: linear-gradient(to right, #9553e7, #e385c6);
+  background-color: #9553e7;
+}
+
+button:active {
+  transform: scale(0.95);
 }
