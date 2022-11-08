@@ -1,14 +1,12 @@
 "use strict";
-// На странице находится форма: инпут для ввода текста и кнопка.
 
-// Пользователь может ввести что-то в инпут и нажать на кнопку,
-// после этого в списке ниже должна отобразится строка, с тем что было введено в инпуте.
-// После этого инпут в форме должен очистится
+// К Todolist из предыдущего домашнего задания необходимо добавить:
 
-// Добавить в каждую строку кнопку “Delete”, при клике на которую элемент удаляется из списка
+// - У каждого элемента LI будет внутри также checkbox - перед текстом
 
-// Если пользователь нажимает на кнопку “Add” - а инпут пустой, то выводить ошибку.
-// Ошибка должна исчезать - если пользователь снова начал вводить текст в инпут.
+// - При нажатии на этот checkbox - кнопка и checkbox должны стать неактивными
+// (disabled), а текст внутри LI должен быть зачеркнутым.
+// Это будет значить что Todo выполнена
 
 const form = document.forms["task-form"];
 const { input } = form;
@@ -29,9 +27,28 @@ function addTask() {
 
   const btnDelete = document.createElement("button");
   btnDelete.innerHTML = "X";
-  task.prepend(btnDelete);
+  task.append(btnDelete);
   btnDelete.classList.add("btn-delete");
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.classList.add("checkbox");
+  task.prepend(checkbox);
 }
+
+list.onchange = (event) => {
+  const isAccepted = event.target.checked;
+  const checkboxClass = event.target.className === "checkbox";
+  const task = event.target.parentNode;
+  const button = task.querySelector("button");
+  // const task = event.target.closest(".task");
+
+  if (isAccepted && checkboxClass) {
+    event.target.disabled = true;
+    button.disabled = true;
+    task.style.textDecoration = "line-through red";
+  }
+};
 
 form.onsubmit = (event) => {
   event.preventDefault();

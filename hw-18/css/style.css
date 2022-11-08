@@ -1,4 +1,4 @@
-.error-text {
+/* .error-text {
   color: red;
   margin: 0px 17px;
 }
@@ -7,7 +7,7 @@
   border: 2px red solid;
 }
 
-input {
+.task-name {
   width: 50%;
   padding: 12px 20px;
   margin: 8px 15px;
@@ -45,7 +45,7 @@ input {
 }
 
 .btn-delete {
-  margin-right: 10px;
+  margin-left: 10px;
   background: #ff4742;
   border: 1px solid #ff4742;
   border-radius: 6px;
@@ -82,4 +82,5 @@ input {
 
 .task {
   margin: 10px 0;
-}
+  list-style: none;
+} */
