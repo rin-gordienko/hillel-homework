@@ -38,7 +38,8 @@ function addTask() {
 
 list.onchange = (event) => {
   const isAccepted = event.target.checked;
-  const checkboxClass = event.target.className === "checkbox";
+  // const checkboxClass = event.target.className === "checkbox";
+  const checkboxClass = event.target.classList.contains("checkbox");
   const task = event.target.parentNode;
   const button = task.querySelector("button");
   // const task = event.target.closest(".task");
