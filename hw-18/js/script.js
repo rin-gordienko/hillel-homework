@@ -20,7 +20,7 @@ function isEmptyField(field) {
 
 function addTask() {
   const task = document.createElement("li");
-  task.classList.add("task");
+  task.classList.add("task", "list-group-item");
   task.innerHTML = input.value;
   list.append(task);
   input.value = "";
