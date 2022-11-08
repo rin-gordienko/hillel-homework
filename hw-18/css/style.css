@@ -1,4 +1,4 @@
-/* .error-text {
+.error-text {
   color: red;
   margin: 0px 17px;
 }
@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-.button {
+/* .button {
   background-color: #c2fbd7;
   border-radius: 100px;
   box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
@@ -42,7 +42,7 @@
     rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
     rgba(44, 187, 99, 0.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
-}
+} */
 
 .btn-delete {
   margin-left: 10px;
@@ -69,7 +69,7 @@
   vertical-align: middle;
 }
 
-.btn-delete:hover,
+/* .btn-delete:hover,
 .btn-delete:active {
   background-color: initial;
   background-position: 0 0;
@@ -78,9 +78,20 @@
 
 .btn-delete:active {
   opacity: 0.5;
+} */
+
+.btn-delete:disabled {
+  border-color: black;
+  background-color: grey;
+  cursor: not-allowed;
+  opacity: 1;
 }
 
 .task {
   margin: 10px 0;
   list-style: none;
-} */
+}
+
+.checkbox {
+  margin-right: 15px;
+}

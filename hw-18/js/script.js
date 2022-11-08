@@ -45,8 +45,8 @@ list.onchange = (event) => {
 
   if (isAccepted && checkboxClass) {
     event.target.disabled = true;
-    button.disabled = true;
-    task.style.textDecoration = "line-through red";
+    task.querySelector("button").disabled = true;
+    task.style.textDecoration = "line-through grey";
   }
 };
 
